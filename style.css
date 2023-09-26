@@ -20,12 +20,40 @@ body{
 .button{
     position: relative;
     padding: 10px 22px;
-    background-color: #7d2ae8;
+    /* background-color: #7d2ae8; */
+    background-color: black;
     border-radius: 6px;
     color: #fff;
     border: none;
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
+    transition: transform 0.2s ease;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.button:active{
+    transform: scale(0.96);
+}
+
+.button::before,
+.button::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid red;
+    background-repeat: no-repeat;
+}
+
+.button::before{
+    top: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),radial-gradient(circle, #7d2ae8 20%, transparent 20%),radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),radial-gradient(circle, #7d2ae8 20%, transparent 20%),radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%,18% 18%,15% 20%,20% 20%,18% 18%;
+    background-position: 5% 90%, 10% 90%,10% 90%,20% 90%,20% 90%, 25% 90%;
+}
+.button::after{
+    bottom: -70%;
 }
