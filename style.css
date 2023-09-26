@@ -18,5 +18,14 @@ body{
 }
 
 .button{
-    
+    position: relative;
+    padding: 10px 22px;
+    background-color: #7d2ae8;
+    border-radius: 6px;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
